@@ -7,3 +7,10 @@ function openModal() {
   modal.style.display = 'block';
 }
 
+function closeModal() {
+  backdrop.style.display = 'none';
+  modal.style.display = 'none';
+}
+
+imageSF.onclick = openModal;
+backdrop.onclick = closeModal;
