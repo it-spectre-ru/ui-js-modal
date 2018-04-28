@@ -1,19 +1,19 @@
-let imageSF = document.querySelectorAll('.trip-image');
-let backdrop = document.querySelector('.backdrop');
-let modal = document.querySelector('.modal');
+var imageSF = document.querySelectorAll('.trip-image');
+var backdrop = document.querySelector('.backdrop');
+var modal = document.querySelector('.modal');
 
 function openModal() {
-  backdrop.style.display = 'block';
-  modal.style.display = 'block';
+    backdrop.style.display = 'block';
+    modal.style.display = 'block';
 }
 
-function closeModal() {
-  backdrop.style.display = 'none';
-  modal.style.display = 'none';
+function closeModal () {
+    backdrop.style.display = 'none';
+    modal.style.display = 'none';
 }
 
-for (var i = 0; i < imageSF.length; i++) {
-  imageSF[i].addEventListener('click', openModal);
+for (i = 0; i < imageSF.length; i++) {
+    imageSF[i].addEventListener('click', openModal);
 }
 
-backdrop.onclick = closeModal;
+backdrop.addEventListener('click', closeModal);
